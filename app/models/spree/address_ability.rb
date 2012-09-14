@@ -1,8 +1,8 @@
-class Spree::AddressAbility
+class AddressAbility
   include CanCan::Ability
 
   def initialize(user)
-    can :manage, Spree::Address do |address|
+    can :manage, Address do |address|
       address.user == user
     end
   end
