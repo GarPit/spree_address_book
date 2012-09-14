@@ -1,5 +1,5 @@
-class Spree::AddressesController < Spree::BaseController
-  helper Spree::AddressesHelper
+class AddressesController < Spree::BaseController
+  helper AddressesHelper
   rescue_from ActiveRecord::RecordNotFound, :with => :render_404
   load_and_authorize_resource
   
