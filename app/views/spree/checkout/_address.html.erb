@@ -27,10 +27,10 @@
   <% end %>
   <%= form.fields_for address_name do |address_form| %>
     <div class="inner">
-      <%= render :partial => 'spree/addresses/form', :locals => {
+      <%= render :partial => 'addresses/form', :locals => {
         :address_name => address_name,
         :address_form => address_form,
-        :address => Spree::Address.default
+        :address => Address.default
       } %>
     </div>
   <% end %>
