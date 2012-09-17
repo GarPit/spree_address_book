@@ -1,7 +1,7 @@
 Address.class_eval do
   belongs_to :user
 
-  attr_accessible :user_id, :deleted_at, :country_id
+  attr_accessible :user_id, :deleted_at, :firstname, :lastname, :address1, :address2, :city, :state_id, :zipcode, :phone, :country_id
 
   def self.required_fields
     validator = Address.validators.find{|v| v.kind_of?(ActiveModel::Validations::PresenceValidator)}
