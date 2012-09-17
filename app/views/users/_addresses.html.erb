@@ -1,9 +1,9 @@
 <% if current_user.addresses.present? %>
-<h3><%= Spree::Address.model_name.human(:count => 2) %></h3>
+<h3><%= Address.model_name.human(:count => 2) %></h3>
 <table id="user_addresses">
   <thead>
     <tr>
-      <th><%= Spree::Address.model_name.human %></th>
+      <th><%= Address.model_name.human %></th>
       <th></th>
     </tr>
   </thead>
