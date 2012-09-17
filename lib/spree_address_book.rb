@@ -5,7 +5,7 @@ module Spree
     class Engine < Rails::Engine
       engine_name 'spree_address_book'
       
-      initializer "spree.advanced_cart.environment", :before => :load_config_initializers do |app|
+      initializer "spree.advanced_cart.environment", :after => :load_config_initializers do |app|
         Spree::AddressBook::Config = AddressBookConfiguration.new
       end
       
